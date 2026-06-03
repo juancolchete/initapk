@@ -23,7 +23,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
-          gradle-version: '8.4'
+          gradle-version: '8.6' # Bumped up to satisfy AGP requirements
 
       - name: Build Debug APK
         run: gradle :app:assembleDebug
@@ -39,3 +39,4 @@ jobs:
       - name: Auto-commit APK to Git
         run: |
           curl -s https://raw.githubusercontent.com/juancolchete/utils/main/gitUpload.sh | bash /dev/stdin ${{ vars.GIT_UPLOAD_PARAMS }} "bot: ${{ github.workflow }}"
+          
