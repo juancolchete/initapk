@@ -16,13 +16,13 @@ class MainActivity : Activity() {
         val rootLayout = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             gravity = Gravity.CENTER
-            setBackgroundColor(Color.BLUE)
+            // No custom background color, leaving it as a simple blank screen
             layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
         }
         
         // 2. Create the text element
         val textView = TextView(this).apply {
-            text = "Hello World! I survived HyperOS!"
+            text = "init apk"
             textSize = 28f
             setTextColor(Color.WHITE)
             gravity = Gravity.CENTER
@@ -34,4 +34,5 @@ class MainActivity : Activity() {
         // 4. Set the container as the active screen content
         setContentView(rootLayout)
     }
+}
 }
