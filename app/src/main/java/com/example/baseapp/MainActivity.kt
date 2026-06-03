@@ -5,20 +5,23 @@ import android.os.Bundle
 import android.widget.TextView
 import android.graphics.Color
 import android.view.Gravity
+import android.view.ViewGroup.LayoutParams
 
 class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        // 1. Create a text element programmatically
         val textView = TextView(this).apply {
-            text = "Hello World! The CI built me successfully!"
-            textSize = 24f
+            text = "Hello World! I am alive!"
+            textSize = 28f
             setTextColor(Color.WHITE)
+            // A bright blue background makes it impossible to mistake for a blank screen
+            setBackgroundColor(Color.BLUE) 
             gravity = Gravity.CENTER
+            // Force the view to fill the entire screen
+            layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
         }
         
-        // 2. Set the text element as the active content view for the screen
         setContentView(textView)
     }
 }
