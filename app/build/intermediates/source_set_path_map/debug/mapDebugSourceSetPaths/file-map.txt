@@ -1,7 +1,0 @@
-com.example.baseapp-pngs-0 /home/runner/work/initapk/initapk/app/build/generated/res/pngs/debug
-com.example.baseapp-resValues-1 /home/runner/work/initapk/initapk/app/build/generated/res/resValues/debug
-com.example.baseapp-packageDebugResources-2 /home/runner/work/initapk/initapk/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.example.baseapp-packageDebugResources-3 /home/runner/work/initapk/initapk/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.example.baseapp-debug-4 /home/runner/work/initapk/initapk/app/build/intermediates/merged_res/debug/mergeDebugResources
-com.example.baseapp-debug-5 /home/runner/work/initapk/initapk/app/src/debug/res
-com.example.baseapp-main-6 /home/runner/work/initapk/initapk/app/src/main/res
