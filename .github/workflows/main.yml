@@ -5,6 +5,10 @@ on:
     branches: [ "main" ]
   workflow_dispatch: # Allows you to manually trigger the build from the GitHub Actions tab
 
+# Force GitHub Actions to use the upcoming Node.js 24 environment
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
