@@ -35,5 +35,3 @@ class MainActivity : Activity() {
         setContentView(rootLayout)
     }
 }
-}
-}
