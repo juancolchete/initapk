@@ -11,26 +11,26 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v6 # Bumped for native Node 24 support
+        uses: actions/checkout@v6 # Assuming this successfully resolved
 
       - name: Setup Java JDK
-        uses: actions/setup-java@v6 # Bumped for native Node 24 support
+        uses: actions/setup-java@v5 # Reverted to v5 to fix the missing version error
         with:
           distribution: 'temurin'
           java-version: '17'
 
       # Using the official Gradle action instead of the local wrapper
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v5 # Bumped from v4
+        uses: gradle/actions/setup-gradle@v5 
         with:
-          gradle-version: '8.6' # Bumped up to satisfy AGP requirements
+          gradle-version: '8.6' # Satisfies AGP requirements
 
       - name: Build Debug APK
         run: gradle :app:assembleDebug
 
       # Upload as a standard GitHub Artifact
       - name: Upload APK Artifact
-        uses: actions/upload-artifact@v6 # Bumped from v5
+        uses: actions/upload-artifact@v6 
         with:
           name: base-app-debug
           path: app/build/outputs/apk/debug/app-debug.apk
